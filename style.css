@@ -6,87 +6,101 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-    color: #fff;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .weather-container {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(45, 45, 45, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 30px 40px;
     border-radius: 15px;
     text-align: center;
-    width: 320px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    transition: transform 0.2s;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .weather-container:hover {
     transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
 h1 {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .search {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .search input {
-    padding: 10px 15px;
-    width: 180px;
+    padding: 12px 15px;
+    width: 200px;
     border-radius: 8px 0 0 8px;
     border: none;
     outline: none;
     font-size: 16px;
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+.search input::placeholder {
+    color: #aaaaaa;
 }
 
 .search button {
-    padding: 10px 15px;
+    padding: 12px 18px;
     border: none;
     border-radius: 0 8px 8px 0;
-    background-color: #ff9800;
-    color: white;
+    background-color: #00bcd4;
+    color: #1a1a1a;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.2s;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
 }
 
 .search button:hover {
-    background-color: #e68900;
+    background-color: #00a4b8;
 }
 
 .location p {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
     font-weight: 500;
+    color: #00bcd4;
 }
 
 .weather-info p {
-    font-size: 16px;
-    margin: 5px 0;
+    font-size: 18px;
+    margin: 8px 0;
 }
 
 button#refreshBtn {
-    padding: 10px 20px;
-    margin-top: 20px;
+    padding: 12px 25px;
+    margin-top: 25px;
     border: none;
     border-radius: 8px;
-    background-color: #00b894;
+    background-color: #79589f;
     color: white;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.2s;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
 }
 
 button#refreshBtn:hover {
-    background-color: #01936b;
+    background-color: #634783;
 }
